@@ -13,36 +13,35 @@ Back-End / Server: Express
 Database System: MongoDB  
   
 ### Relevant File Structure:  
-communalimages  
--media  
--public  
-  -index.html  
--server  
-  -database  
-    -DB  
-  -models  
-    -ImagePort  
-  -routes  
-    -ImagePortRoutes  
-  -server.js  
--src  
-  -components  
-    -EditComponent  
-    -GalleryComponent  
-    -HomeComponent  
-    -TableRow  
-    -UploadComponent  
-    -ViewComponent  
-  -App.js  
+communalimages   
++public  
+++index.html  
++server  
+++database  
+++++DB  
+++models  
++++ImagePort  
+++routes  
++++ImagePortRoutes  
+++server.js  
++src  
+++components  
++++EditComponent  
++++GalleryComponent  
++++HomeComponent  
++++TableRow  
++++UploadComponent  
++++ViewComponent  
+++App.js  
   
-Following the typical react app organization, src contains components for the application, which are encapsulated to their functionality and loaded into the App.js file, with   the back-end handled in the server folder.
+Following the typical react app organization, src contains components for the application, which are encapsulated to their functionality and loaded into the App.js file, with   the back+end handled in the server folder.
   
 ## Running:
 
 #### Locally:  
 Clone repository's master branch.  
 Navigate to the server folder and enter into command line:  
-  'node server.js'  
+'node server.js'  
 in order to fire up the server.  
 Proceed to the parent folder and run either:  
   'npm start' or 'yarn start' depending on your development environment.  
