@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+
+//Component for uploading new image data to database
 export default class UploadComponent extends Component {
 
     constructor(props) {
@@ -16,6 +18,9 @@ export default class UploadComponent extends Component {
             height: ''
         }
     }
+
+
+//Field-specific data to be pushed
     onChangeURL(e) {
         this.setState({
             url: e.target.value
@@ -31,6 +36,8 @@ export default class UploadComponent extends Component {
             height: e.target.value
         });
     }
+
+//Post form data to database and redirect to view window
     onSubmit(e) {
         e.preventDefault();
         const imageport = {
@@ -45,7 +52,7 @@ export default class UploadComponent extends Component {
             width: '',
             height: ''
         })
-        this.props.history.push('/view');
+        this.props.history.push('/view')
     }
 
     render() {

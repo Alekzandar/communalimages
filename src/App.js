@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
+
+//Creating necessary components for each navbar link
 //import HomeComponent from './components/HomeComponent';
 import UploadComponent from './components/UploadComponent';
 import EditComponent from './components/EditComponent';
 import ViewComponent from './components/ViewComponent';
+
+//App referencing and generating the necessary components into
+//the displayed navbar structure 
+//Switch specifies components to render
 
 class App extends Component {
   render() {
@@ -27,11 +33,14 @@ class App extends Component {
               </ul>
             </div>
           </nav>
+
+          
           <Switch>
               <Route exact path='/upload' component={UploadComponent} />
               <Route path='/edit/:id' component={EditComponent} />
               <Route path='/view' component={ViewComponent} />
           </Switch>
+
         </div>
       </Router>
     );

@@ -13,7 +13,9 @@ var ImagePort = new Schema({
       type: Number
   }
 },{
-    collection: 'images'
+    collection: 'images' //stored in /images in database extension
 });
+
+//export to easily build schema
 
 module.exports = mongoose.model('ImagePort', ImagePort);

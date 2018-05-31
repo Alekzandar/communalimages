@@ -3,8 +3,11 @@ import axios from 'axios';
 import TableRow from './TableRow';
 import ImageGallery from './GalleryComponent';
 
+
+//Component for rendering Gallery and Edit Table
 export default class ViewComponent extends Component {
 
+//Populate database data into edit table and construct
   constructor(props) {
       super(props);
       this.state = {imageports: []};
@@ -24,8 +27,7 @@ export default class ViewComponent extends Component {
         });
     }
 
-
-
+//Render gallery and table with necessary headers
     render() {
       return (
         <div className="container">
@@ -33,7 +35,6 @@ export default class ViewComponent extends Component {
             <table className="table table-striped">
               <thead>
                 <tr>
-                  <td>ID</td>
                   <td>URL</td>
                   <td>Width</td>
                   <td>Height</td>

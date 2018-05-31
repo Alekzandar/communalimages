@@ -21,6 +21,7 @@ const images = [
 */
 
 
+//Gallery Component for building image gallery
 class GalleryComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -32,6 +33,8 @@ class GalleryComponent extends React.Component {
     this.gotoNext = this.gotoNext.bind(this);
     this.gotoPrevious = this.gotoPrevious.bind(this);
   }
+
+//Lightbox implements for opening, closing, and iterating
   openLightbox(event, obj) {
     this.setState({
       currentImage: obj.index,
@@ -54,6 +57,8 @@ class GalleryComponent extends React.Component {
       currentImage: this.state.currentImage + 1,
     });
   }
+
+  //Retrieve image data from server and populate into list for Gallery
   componentDidMount() {
       axios.get('http://localhost:4200/imageport')
         .then(res => {
@@ -67,9 +72,14 @@ class GalleryComponent extends React.Component {
             console.log(error);
         });
     }
+
+
+
   render() {
     const width = this.state.width;
     return (
+      
+      //Dynamic Column implement for Gallery
       <Measure bounds onResize={(contentRect) => this.setState({ width: contentRect.bounds.width })}>
         {
         ({measureRef}) => {

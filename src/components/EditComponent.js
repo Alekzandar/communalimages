@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+
+//Component for editing existing files in database
 export default class EditComponent extends Component {
 
     constructor(props) {
@@ -13,6 +15,7 @@ export default class EditComponent extends Component {
         this.state = {url: '', width: '', height: ''};
     }
 
+//Retrieve database object to be edited
     componentDidMount() {
         axios.get('http://localhost:4200/imageport/edit/'+this.props.match.params.id)
             .then(response => {
@@ -38,6 +41,8 @@ export default class EditComponent extends Component {
             height: e.target.value
         });
     }
+
+//Stage edits to update and post to database, redirecting to gallery window
     onSubmit(e) {
         e.preventDefault();
         const imageport = {
@@ -53,7 +58,7 @@ export default class EditComponent extends Component {
             height: ''
         })
         this.props.history.push('/view');
-        window.location.reload();
+        window.location.reload(); //refresh view window to reflect update
     }
 
     render() {

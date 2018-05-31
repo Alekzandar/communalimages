@@ -6,9 +6,11 @@ const cors = require('cors');
 
 const app = express();
 
+//reference database link 
 const config = require('./database/DB');
 const ImagePortRouter = require('./routes/ImagePortRoutes');
 
+//connect to database
 mongoose.connect(config.DB).then(
     () => {console.log('Database is connected!') },
     err => { console.log('Ruh oh, could notxw connect to the database' +err)

@@ -1,3 +1,4 @@
+/* General stylesheet for the project */
 
 body {
   margin: 0;
@@ -5,83 +6,9 @@ body {
   font-family: sans-serif;
 }
 
+
 .div{
     position: relative;
-}
-
-.arrow-left{
-    background-image:url("../svg/triangle-left.svg");
-    background-size: contain;
-}
-
-.arrow-right{
-    background-image:url("../svg/triangle-right.svg");
-    background-size: contain;
-}
-
-.col-sm{
-    transition: all 1s ease;
-}
-
-.col-6{
-    transition: all 1s ease;
-}
-
-.crossX{
-    content: "";
-    height: 30px;
-    background-color: transparent;
-    background-position : center center;
-    background-repeat:no-repeat;
-    background-image:url("../svg/x.svg");
-    background-size: contain;
-}
-
-
-.bouton-image{
-    content: "";
-    height: 50px;
-    display: inline-block;
-    margin-right: 5px;
-    vertical-align: text-top;
-    background-color: transparent;
-    background-position : center center;
-    background-repeat:no-repeat;
-}
-
-#tab1{
-    background-image: url("../media/Then_Street_View.jpg");
-}
-
-#tab2{
-    background-image: url("../media/miners.jpg");
-}
-
-#tab3{
-    background-image: url("../media/big_organ.jpg");
-}
-
-#tab4{
-    background-image: url("../media/sewing_factory.jpg");
-}
-
-.overlay{
-    position:absolute;
-    left: 0;
-    top: 0;
-    z-index:2;
-    width: 100%;
-    height: 100%;
-    background:url("../media/MiningMemoriesNoBox.png") no-repeat 50% 50%;
-    background-size: contain;
-  } 
-
-#introPage{
-
-background-image:url("../media/Then_Street_View.jpg");
-height:100%;
-width:100%;
-
 }
 
 
