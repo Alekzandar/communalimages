@@ -53,6 +53,7 @@ export default class EditComponent extends Component {
             height: ''
         })
         this.props.history.push('/view');
+        window.location.reload();
     }
 
     render() {
