@@ -1,3 +1,57 @@
+# Communal Gallery React Application
+
+Aleksandar Antonov
+
+The 'Communal Gallery' is intended as an introductory template to demonstrate a responsive implementation of a gallery interface that may be communally owned and managed. Individuals testing this platform may use the available fields to upload image url's with the necessary sizing attribute. This sort of platform may be implemented in a page 
+where an individual may be looking to create a collaborative gallery around a theme, to spark discussion within an existing web template, to brainstorm or generate ideas, 
+among many other potential use cases. 
+
+## Technologies:
+
+Front End: React, Bootstrap, ReactStrap
+Back-End / Server: Express
+Database System: MongoDB
+
+### Relevant File Structure:
+communalimages
+-media
+-public
+  -index.html
+-server
+  -database
+    -DB
+  -models
+    -ImagePort
+  -routes
+    -ImagePortRoutes
+  -server.js
+-src
+  -components
+    -EditComponent
+    -GalleryComponent
+    -HomeComponent
+    -TableRow
+    -UploadComponent
+    -ViewComponent
+  -App.js
+
+Following the typical react app organization, src contains components for the application, which are encapsulated to their functionality and loaded into the App.js file, with the back-end handled in the server folder.
+
+## Running:
+
+#### Locally:
+Clone repository's master branch.
+Navigate to the server folder and enter into command line:
+  'node server.js'
+in order to fire up the server.
+Proceed to the parent folder and run either:
+  'npm start' or 'yarn start' depending on your development environment.
+  'nodemon server/server' may be utilized if you intend to tweak and develop.
+Open a browser window and navigate to:
+  'https://localhost:3000'
+
+ 
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
