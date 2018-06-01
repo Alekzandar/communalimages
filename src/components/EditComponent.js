@@ -26,6 +26,7 @@ export default class EditComponent extends Component {
             })
         }
 
+//Field-specific changes
     onChangeURL(e) {
         this.setState({
             url: e.target.value

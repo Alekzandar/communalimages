@@ -1,9 +1,14 @@
 const express = require('express');
 const app = express();
+
+//create router object
 const ImagePortRouter = express.Router();
 
+//create reference to schema
 const ImagePort = require('../models/ImagePort');
 
+
+//adding object to server
 ImagePortRouter.route('/add').post(function (req, res) {
   const imageport = new ImagePort(req.body);
   imageport.save()
@@ -15,6 +20,7 @@ ImagePortRouter.route('/add').post(function (req, res) {
     });
 });
 
+//retrieving from server
 ImagePortRouter.route('/').get(function (req, res) {
     ImagePort.find(function (err, imageports){
     if(err){
@@ -26,6 +32,7 @@ ImagePortRouter.route('/').get(function (req, res) {
   });
 });
 
+//staging existing objects in server for edit
 ImagePortRouter.route('/edit/:id').get(function (req, res) {
   const id = req.params.id;
   ImagePort.findById(id, function (err, imageport){
@@ -33,6 +40,7 @@ ImagePortRouter.route('/edit/:id').get(function (req, res) {
   });
 });
 
+//updating and posting back to server
 ImagePortRouter.route('/update/:id').post(function (req, res) {
     ImagePort.findById(req.params.id, function(err, imageport) {
     if (!imageport)
@@ -52,6 +60,7 @@ ImagePortRouter.route('/update/:id').post(function (req, res) {
   });
 });
 
+//deleting existing object from server
 ImagePortRouter.route('/delete/:id').get(function (req, res) {
     ImagePort.findByIdAndRemove({_id: req.params.id},
        function(err, imageport){

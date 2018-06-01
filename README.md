@@ -32,7 +32,11 @@ communalimages
 +++TableRow  
 +++UploadComponent  
 +++ViewComponent  
-++App.js  
++++HomeComponent
+++media
++++relatedimages
+++App.js
+++App.css
   
 Following the typical react app organization, src contains components for the application, which are encapsulated to their functionality and loaded into the App.js file, with   the back+end handled in the server folder.
   

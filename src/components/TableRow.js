@@ -21,7 +21,7 @@ class TableRow extends Component {
     return (
       //Direct user to appropriate window depending on their selection
         <tr>
-          <td class = "col-1">
+          <td>
             {this.props.obj.url}
           </td>
           <td>
