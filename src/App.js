@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-
+import { Navbar, NavbagToggler, NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap';
 
 //Creating necessary components for each navbar link
 //import HomeComponent from './components/HomeComponent';
@@ -12,13 +12,21 @@ import ViewComponent from './components/ViewComponent';
 //the displayed navbar structure 
 //Switch specifies components to render
 
+const navStyle = {
+  backgroundColor: "#64bf6a"
+}
+
 class App extends Component {
   render() {
     return (
+
+
+    <body style = {{backgroundColor :  "#ffb564"}} >
     <Router>
-        <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand">Communal Gallery Platform</a>
+        <div className = "container">
+        <Navbar style  = {navStyle} light expand = "md">
+        <NavbarBrand className="navbar navbar-expand-lg">
+            <a className="navbar-brand" style = {{textAlign: "center", color: "white", fontSize : 25}}>Communal Gallery Platform</a>
             <div class = "col-sm-12 col-md-6 col-lg-4">
               <ul className="navbar-nav mr-auto">
               <li className="nav-item">
@@ -32,8 +40,8 @@ class App extends Component {
                 </li>
               </ul>
             </div>
-          </nav>
-
+          </NavbarBrand>
+          </Navbar>
           
           <Switch>
               <Route exact path='/upload' component={UploadComponent} />
@@ -43,6 +51,8 @@ class App extends Component {
 
         </div>
       </Router>
+    </body>
+
     );
   }
 }

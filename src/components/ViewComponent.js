@@ -4,6 +4,14 @@ import TableRow from './TableRow';
 import ImageGallery from './GalleryComponent';
 
 
+const tableStyle = {
+  border: "5px solid black", 
+  overflow: "auto", 
+  tableLayout: "fixed",
+  width: "100%",
+  wordWrap: "break-word"
+}   
+
 //Component for rendering Gallery and Edit Table
 export default class ViewComponent extends Component {
 
@@ -32,12 +40,14 @@ export default class ViewComponent extends Component {
       return (
         <div className="container">
             <ImageGallery></ImageGallery>
-            <table className="table table-striped">
+            <table className="table table-striped" style = {tableStyle}>
               <thead>
                 <tr>
                   <td>URL</td>
                   <td>Width</td>
                   <td>Height</td>
+                  <td>Edit Entry</td>
+                  <td>Remove Entry</td>
                 </tr>
               </thead>
               <tbody>
