@@ -1,3 +1,5 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
 .App {
   text-align: center;
 }
@@ -112,6 +114,130 @@
 .popup .content {
   max-height: 30%;
   overflow: auto;
+}
+
+h3 {
+	font-color: white;
+}
+
+.modal-content {
+    -webkit-border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0;
+    -moz-background-clip: padding;
+    border-radius: 6px;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 0 40px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 0 40px rgba(0,0,0,.5);
+    box-shadow: 0 0 40px rgba(0,0,0,.5);
+    color: #000;
+    background-color: #fff;
+    border: rgba(0,0,0,0);
+}
+.modal-message .modal-dialog {
+    width: 300px;
+}
+.modal-message .modal-body, .modal-message .modal-footer, .modal-message .modal-header, .modal-message .modal-title {
+    background: 0 0;
+    border: none;
+    margin: 0;
+    padding: 0 20px;
+    text-align: center!important;
+}
+
+.modal-message .modal-title {
+    font-size: 17px;
+    color: #737373;
+    margin-bottom: 3px;
+}
+
+.modal-message .modal-body {
+    color: #737373;
+}
+
+.modal-message .modal-header {
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 15px 0 8px;
+}
+.modal-message .modal-header .fa, 
+.modal-message .modal-header 
+.glyphicon, .modal-message 
+.modal-header .typcn, .modal-message .modal-header .wi {
+    font-size: 30px;
+}
+
+.modal-message .modal-footer {
+    margin: 25px 0 20px;
+    padding-bottom: 10px;
+}
+
+.modal-backdrop.in {
+    zoom: 1;
+    filter: alpha(opacity=75);
+    -webkit-opacity: .75;
+    -moz-opacity: .75;
+    opacity: .75;
+}
+.modal-backdrop {
+    background-color: #fff;
+}
+.modal-message.modal-success .modal-header {
+    color: #53a93f;
+    border-bottom: 3px solid #a0d468;
+}
+
+.modal-message.modal-info .modal-header {
+    color: #57b5e3;
+    border-bottom: 3px solid #57b5e3;
+}
+
+.modal-message.modal-danger .modal-header {
+    color: #d73d32;
+    border-bottom: 3px solid #e46f61;
+}
+
+.modal-message.modal-warning .modal-header {
+    color: #f4b400;
+    border-bottom: 3px solid #ffce55;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;   
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.uploadStyle {
+  background: #ffd7b5;
+}
+
+.editStyle {
+  background: #d1f1b1;
 }
 
 /* Add animation (fade in the popup) */

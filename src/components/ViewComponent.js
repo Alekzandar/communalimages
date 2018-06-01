@@ -43,11 +43,11 @@ export default class ViewComponent extends Component {
             <table className="table table-striped" style = {tableStyle}>
               <thead>
                 <tr>
-                  <td>URL</td>
-                  <td>Width</td>
-                  <td>Height</td>
-                  <td>Edit Entry</td>
-                  <td>Remove Entry</td>
+                  <td><b>URL</b></td>
+                  <td><b>Width</b></td>
+                  <td><b>Height</b></td>
+                  <td><b>Edit Entry</b></td>
+                  <td><b>Remove Entry</b></td>
                 </tr>
               </thead>
               <tbody>

@@ -31,9 +31,11 @@ export default class HomeComponent extends Component{
 				<img src= {splash} alt = "landingimage"/>
         <Button onClick={this.toggle}>Welcome to 'The Gallery'</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>About The Project</ModalHeader>
+          <ModalHeader toggle={this.toggle}><font color="orange">About The Project</font></ModalHeader>
           <ModalBody>
-            This project invites the user to contribute to the communal image gallery and consider when such a portal may serve useful for communal development. </ModalBody>
+            This project invites the user to contribute to the communal image gallery and consider when such a portal may serve useful for communal development.
+            <p>Upload your own online images to reflect a part of yourself in this communal effort!</p>
+            </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.toggle}>Explore</Button>
           </ModalFooter>

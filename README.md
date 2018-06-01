@@ -45,13 +45,15 @@ Following the typical react app organization, src contains components for the ap
 #### Locally:  
 Clone repository's master branch.  
 Navigate to the server folder and enter into command line:  
-'node server.js'  
+->'node server.js'  
 in order to fire up the server.  
-Proceed to the parent folder and run either:  
-  'npm start' or 'yarn start' depending on your development environment.  
-  'nodemon server/server' may be utilized if you intend to tweak and develop.  
+Proceed to the parent folder and build dependencies by running either:  
+->'npm install' or 'yarn install' depending on your development environment.
+Launch with:
+->'npm start' or 'yarn start'   
+->'nodemon server/server' may be utilized if you intend to tweak and develop.  
 Open a browser window and navigate to:  
-  'https://localhost:3000'  
+->'https://localhost:3000/home'  
 
  
 

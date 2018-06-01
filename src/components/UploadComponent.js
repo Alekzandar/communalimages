@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../App.css';
+
+
+require('bootstrap');
 
 
 //Component for uploading new image data to database
@@ -53,29 +57,54 @@ export default class UploadComponent extends Component {
             height: ''
         })
         this.props.history.push('/view')
+        window.location.reload(); //refresh view window to reflect update
     }
 
     render() {
         return (
-            <div style={{marginTop: 50}}>
+            <div class = "uploadStyle" style={{marginTop: 50}}>
                 <h3>Contribute New Image</h3>
+                   <div class="buttons-preview">
+
+                <button class="btn btn-outline-info" data-toggle="modal" data-target="#modal-warning">Before Contributing</button>
+                </div>
+                    <div id="modal-warning" class="modal modal-message modal-warning fade" >
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <i class="fa fa-warning"></i>
+                                </div>
+                                <div class="modal-title"><b>Upload Guide</b></div>
+
+                                <div class="modal-body">For <u>wider</u> images set values that roughly maintain aspect ratio. (i.e width: 5, height: 3) </div>
+                                <div class="modal-body">For <u>taller</u> images set values that roughly maintain aspect ratio. (i.e width: 3, height: 5) </div>
+                                <div class="modal-footer">
+                                    <small><font color="red">Disclaimer: Abuse of service will lead to it's termination.</font></small>
+                                    <button type="button" class="btn btn-warning" data-dismiss="modal">OK</button>
+                                </div>
+                            </div> 
+                        </div> 
+                    </div>
+
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
-                        <label>Add URL:  </label>
-                        <input type="text" value={this.state.url} className="form-control" onChange={this.onChangeURL}/>
+                        <label> Add URL:  </label>
+                        <input type="url" value={this.state.url} className="form-control" onChange={this.onChangeURL} placeholder ="https://cdn.theatlantic.com/static/mt/assets/science/cat_caviar.jpg" required/>
                     </div>
                     <div className="form-group">
                         <label>Add Image Width: </label>
-                        <input type="number" value={this.state.width} className="form-control" onChange={this.onChangeWidth}/>
+                        <input type="number" value={this.state.width} className="form-control" min = "2" max = "10" onChange={this.onChangeWidth} required/>
                     </div>
                      <div className="form-group">
                         <label>Add Image Height: </label>
-                        <input type="number" value={this.state.height} className="form-control" onChange={this.onChangeHeight}/>
+                        <input type="number" value={this.state.height} className="form-control" min = "2" max = "10" onChange={this.onChangeHeight} required/>
                     </div>
                     <div className="form-group">
-                        <input type="submit" value="Contribute" className="btn btn-primary"/>
+                        <input type="submit" value="Contribute!" className="btn btn-primary"/>
                     </div>
                 </form>
+
+
             </div>
         )
     }
